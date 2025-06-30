@@ -1,0 +1,32 @@
+﻿@using Views.Models.DTOModels
+@model IEnumerable<CoursesWithStudentsDTO>
+
+<h1>Courses</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>          
+        </tr>
+    </thead>
+    <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td>
+                        @item.Id
+                    </td>
+
+                    <td>
+                        @item.Name
+                    </td>
+                   <td>
+                        @{
+                        Html.RenderPartial("_PartialView", item.Students);
+                        }
+                   </td>
+
+                </tr>
+            }
+    </tbody>
+</table>

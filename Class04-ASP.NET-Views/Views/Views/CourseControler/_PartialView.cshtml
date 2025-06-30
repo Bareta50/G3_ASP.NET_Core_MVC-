@@ -1,0 +1,15 @@
+﻿@using Views.Models.DTOModels
+@model IEnumerable<StudentDTO>
+
+    <div>
+        <span>This is a partial view!            
+        </span>
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                @item.FullName
+            </li>
+        }
+    </ul>
+    </div>

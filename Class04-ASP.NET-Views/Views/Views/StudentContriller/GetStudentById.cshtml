@@ -1,0 +1,25 @@
+﻿@model Views.Models.DTOModels.StudentWithCoursDTO
+
+<h1>Students By Id</h1>
+
+@if (Model is null)
+{
+    <p>!! No Student Was found with that ID !!</p>
+}
+else
+{
+    <div>
+        <h3>Student with course DTO</h3>
+        <hr />
+        <dl class="row">
+            <dt class="com-sm-2">FullName</dt>
+            <dd class="com-sm-10">@Model.FullName</dd>
+
+            <dt class="com-sm-2">Age</dt>
+            <dd class="com-sm-10">@Model.Age</dd>
+
+            <dt class="com-sm-2">Course Name</dt>
+            <dd class="com-sm-10">@Model.CourseName</dd>
+        </dl>
+    </div>
+}
